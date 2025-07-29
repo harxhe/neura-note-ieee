@@ -3,8 +3,9 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 
-import todoRoutes from './routes/todoRoutes';
-import authRoutes from './routes/authRoutes';
+import todoRoutes from './src/routes/todoRoutes';
+import authRoutes from './src/routes/authRoutes';
+import courseRoutes from './src/routes/courseRoutes';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use(
 
 app.use('/api/auth', authRoutes);
 app.use('/api/todos', todoRoutes);
+app.use('/api/courses',courseRoutes);
 
 const PORT = process.env.PORT || 3000;
 
@@ -30,5 +32,5 @@ app.get('/', (_req, res) => {
   });
   
 app.listen(PORT, () => {
-    console.log(`🚀 Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
   });
