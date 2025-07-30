@@ -88,12 +88,11 @@ export default function SignupModal({ isOpen, onClose, onSwitchToLogin }: Signup
                 value={formData.username}
                 onChange={(e) => handleInputChange('username', e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
                 style={{
                   borderColor: "#829577",
                   backgroundColor: "#FFFFFF",
-                  color: "#000000",
-                  focusRingColor: "#CA8C71"
+                  color: "#000000"
                 }}
                 placeholder="Choose a username"
               />
@@ -114,12 +113,11 @@ export default function SignupModal({ isOpen, onClose, onSwitchToLogin }: Signup
                 value={formData.fullName}
                 onChange={(e) => handleInputChange('fullName', e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
                 style={{
                   borderColor: "#829577",
                   backgroundColor: "#FFFFFF",
-                  color: "#000000",
-                  focusRingColor: "#CA8C71"
+                  color: "#000000"
                 }}
                 placeholder="Enter your full name"
               />
@@ -140,12 +138,11 @@ export default function SignupModal({ isOpen, onClose, onSwitchToLogin }: Signup
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
                 style={{
                   borderColor: "#829577",
                   backgroundColor: "#FFFFFF",
-                  color: "#000000",
-                  focusRingColor: "#CA8C71"
+                  color: "#000000"
                 }}
                 placeholder="Enter your email address"
               />
@@ -166,12 +163,11 @@ export default function SignupModal({ isOpen, onClose, onSwitchToLogin }: Signup
                 value={formData.password}
                 onChange={(e) => handleInputChange('password', e.target.value)}
                 required
-                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+                className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
                 style={{
                   borderColor: "#829577",
                   backgroundColor: "#FFFFFF",
-                  color: "#000000",
-                  focusRingColor: "#CA8C71"
+                  color: "#000000"
                 }}
                 placeholder="Create a strong password"
               />
@@ -189,12 +185,11 @@ export default function SignupModal({ isOpen, onClose, onSwitchToLogin }: Signup
                 <button
                   type="button"
                   onClick={() => setShowUserTypeOptions(!showUserTypeOptions)}
-                  className="w-full px-4 py-3 rounded-lg border-2 text-left focus:outline-none focus:ring-2 transition-all"
+                  className="w-full px-4 py-3 rounded-lg border-2 text-left focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
                   style={{
                     borderColor: "#829577",
                     backgroundColor: "#FFFFFF",
-                    color: formData.userType ? "#000000" : "#829577",
-                    focusRingColor: "#CA8C71"
+                    color: formData.userType ? "#000000" : "#829577"
                   }}
                 >
                   {formData.userType || "Select your role"}

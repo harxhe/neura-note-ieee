@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import { Button } from "./ui/button"
 import LoginModal from "./LoginModal"
 import SignupModal from "./SignupModal"
 import { useState } from "react"
@@ -28,7 +28,7 @@ export default function StudyPlatform() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FFF1E8" }}>
       {/* Header */}
-      <header className="flex justify-end items-center p-4 sticky top-0 z-10" style={{ backgroundColor: "#FFF1E8" }}>
+      <header className="flex justify-end items-center p-4 absolute top-0 right-0 z-20" style={{ backgroundColor: "transparent" }}>
         <div className="flex items-center gap-4">
           <Button
             variant="outline"
@@ -48,14 +48,14 @@ export default function StudyPlatform() {
         </div>
       </header>
 
-      {/* Main Scrollable Content */}
-      <main className="relative px-4 pb-20">
+      {/* Main Content */}
+      <main className="relative min-h-screen flex items-center">
         {/* Content Container */}
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto px-4">
           {/* Hero Section with Illustration */}
-          <div className="relative flex flex-col md:flex-row-reverse items-center justify-center gap-12 pt-2">
-            {/* Text Content positioned next to the table */}
-            <div className="flex-shrink-0 text-center z-10">
+          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Text Content positioned on the right */}
+            <div className="flex-1 text-center lg:text-left z-10 order-2 lg:order-1">
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-bold leading-tight" style={{ color: "#000000" }}>
                   NeuraNote
@@ -81,15 +81,17 @@ export default function StudyPlatform() {
               </div>
             </div>
 
-            {/* Table Illustration - Moved to bottom left */}
-            <div className="flex-shrink-0 max-w-lg mt-0 mr-8 self-center">
-              <Image
-                src="/table.png"
-                alt="Study workspace illustration"
-                width={550}
-                height={660}
-                className="w-full h-auto"
-              />
+            {/* Table Illustration - positioned on the left */}
+            <div className="flex-1 flex justify-center lg:justify-start order-1 lg:order-2">
+              <div className="max-w-lg">
+                <Image
+                  src="/table.png"
+                  alt="Study workspace illustration"
+                  width={550}
+                  height={660}
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
 

@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+
+# Tailwind cache (if any)
+.postcss-cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local environment variables
+.env*
+!.env.example
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store

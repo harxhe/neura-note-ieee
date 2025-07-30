@@ -9,11 +9,6 @@ interface LoginModalProps {
   onSwitchToSignup: () => void;
 }
 
-interface LoginModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 export default function LoginModal({ isOpen, onClose, onSwitchToSignup }: LoginModalProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -74,12 +69,11 @@ export default function LoginModal({ isOpen, onClose, onSwitchToSignup }: LoginM
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+              className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
               style={{
                 borderColor: "#829577",
                 backgroundColor: "#FFFFFF",
-                color: "#000000",
-                focusRingColor: "#CA8C71"
+                color: "#000000"
               }}
               placeholder="Enter your email or username"
             />
@@ -100,12 +94,11 @@ export default function LoginModal({ isOpen, onClose, onSwitchToSignup }: LoginM
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 transition-all"
+              className="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-[#CA8C71] transition-all"
               style={{
                 borderColor: "#829577",
                 backgroundColor: "#FFFFFF",
-                color: "#000000",
-                focusRingColor: "#CA8C71"
+                color: "#000000"
               }}
               placeholder="Enter your password"
             />

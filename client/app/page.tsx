@@ -1,5 +1,10 @@
-import StudyPlatform from '../components/StudyPlatform'
+import StudyPlatform from '@/components/StudyPlatform'
 
 export default function Home() {
-  return <StudyPlatform />
-} 
+  return (
+    <>
+    
+      <StudyPlatform />
+    </>
+  )
+}
