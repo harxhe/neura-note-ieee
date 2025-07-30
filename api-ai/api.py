@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],  
 )
 
-GROQ_API_KEY = 'Secret Groq Key'
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 llm = ChatGroq(temperature=0, groq_api_key=GROQ_API_KEY, model_name="llama3-70b-8192")
 
